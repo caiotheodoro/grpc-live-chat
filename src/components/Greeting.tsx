@@ -1,9 +1,5 @@
+import { Avatar, IconButton, Paper, TextField, Tooltip, Typography } from "@mui/material";
 import React, { useState } from "react";
-import Paper from "@material-ui/core/Paper";
-import Typopgraphy from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import Avatar from "@material-ui/core/Avatar";
-import { IconButton, Tooltip } from "@material-ui/core";
 import ImageGalleryDialog from "./ImageGallery";
 
 const style: { [key: string]: React.CSSProperties } = {
@@ -60,9 +56,9 @@ const Greeting: React.FC<Props> = (props) => {
     <>
       <Paper style={style.paper}>
         <form onSubmit={handleSubmit} style={style.form}>
-          <Typopgraphy variant="h5">
+          <Typography variant="h5">
             Please enter your name before joining the chat
-          </Typopgraphy>
+          </Typography>
           <IconButton
             style={style.avatar}
             onClick={() => setOpen((prev) => !prev)}

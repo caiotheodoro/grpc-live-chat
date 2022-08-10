@@ -1,19 +1,10 @@
 import React, { useState } from "react";
-import {
-  Divider,
-  Grid,
-  Paper,
-  Typography,
-  Avatar,
-  TextField,
-  Chip,
-} from "@material-ui/core";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import SendIcon from "@material-ui/icons/Send";
+
 import UserList from "./UserList";
 import ChatBubble from "./ChatBubble";
 import { Status, StreamMessage, User } from "../proto/random_pb";
 import { Session } from "../App";
+import { Avatar, Chip, Divider, Grid, InputAdornment, Paper, TextField, Typography } from "@mui/material";
 
 const style: { [key: string]: React.CSSProperties } = {
   container: {
@@ -89,7 +80,7 @@ const Chat: React.FC<Props> = (props) => {
                 <Grid
                   container
                   direction="column"
-                  justify="center"
+                  justifyContent="center"
                   alignItems="center"
                 >
                   <Typography variant="button">{user.name}</Typography>
@@ -124,7 +115,7 @@ const Chat: React.FC<Props> = (props) => {
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
-                        <SendIcon />
+                        send
                       </InputAdornment>
                     ),
                   }}

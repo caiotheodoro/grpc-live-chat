@@ -1,6 +1,5 @@
+import { Avatar, Card, Chip, Grid, Typography } from "@mui/material";
 import React from "react";
-import Card from "@material-ui/core/Card";
-import { Avatar, Typography, Chip, Grid } from "@material-ui/core";
 
 interface IUser {
   id: number;
@@ -37,7 +36,7 @@ const UserList: React.FC<Props> = (props) => {
           <Grid
             container
             direction="column"
-            justify="flex-start"
+            justifyContent="flex-start"
             alignItems="flex-start"
           >
             <Typography variant="body1">{u.name}</Typography>
